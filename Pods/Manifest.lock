@@ -1,12 +1,15 @@
 PODS:
   - Alamofire (4.5.0)
+  - ResponseDetective (1.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
+  - ResponseDetective
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  ResponseDetective: 58281558cda442747b3c4c711edf20b647018240
 
-PODFILE CHECKSUM: 94822593110db414c5346014d1547f86688d06e9
+PODFILE CHECKSUM: 761fb2ea09afc22e72c15f4fe80b7752ec3050ce
 
 COCOAPODS: 1.2.0

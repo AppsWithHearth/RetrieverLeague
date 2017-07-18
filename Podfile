@@ -6,7 +6,10 @@ target 'RetrieverLeague' do
   use_frameworks!
 
   # Pods for RetrieverLeague
+  
   pod 'Alamofire', '~> 4.4'
+  pod 'ResponseDetective'
+  
   target 'RetrieverLeagueTests' do
     inherit! :search_paths
     # Pods for testing
