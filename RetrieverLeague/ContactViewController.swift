@@ -1,5 +1,5 @@
 //
-//  MoreInfoViewController.swift
+//  ContactViewController.swift
 //  RetrieverLeague
 //
 //  Created by Uros Zivaljevic on 7/18/17.
@@ -8,18 +8,18 @@
 
 import UIKit
 
-class MoreInfoViewController: BaseViewController {
+class ContactViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.titleImage = #imageLiteral(resourceName: "icon_moreInfo")
-        // Do any additional setup after loading the view.
+
+        self.titleImage = #imageLiteral(resourceName: "icon_contact")
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+ 
 
 }

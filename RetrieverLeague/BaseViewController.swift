@@ -24,7 +24,7 @@ class BaseViewController: UIViewController {
     }
 
     func setupTitleView() {
-        let titleImageView = UIImageView(image: #imageLiteral(resourceName: "icon_league"))
+        let titleImageView = UIImageView(image: titleImage)
         titleImageView.frame.size = CGSize(width: 200, height: 40)
         titleImageView.contentMode = .scaleAspectFit
         self.navigationItem.titleView = titleImageView

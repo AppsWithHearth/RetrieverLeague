@@ -11,8 +11,6 @@ import Alamofire
 import ResponseDetective
 
 typealias CompletionHandler = (Error?, Any?) -> Void
-typealias ObjectCompletionHandler = (Error?, JSONObject?) -> Void
-typealias ArrayCompletionHandler = (Error?, JSONArray?) -> Void
 typealias JSONObject = [String: Any]
 typealias JSONArray = [JSONObject]
 
