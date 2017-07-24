@@ -30,6 +30,7 @@
 		F7A9B40E1F1DF3AA0090EC3F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A9B40D1F1DF3AA0090EC3F /* Constants.swift */; };
 		F7A9B4101F1DF4B30090EC3F /* DogsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A9B40F1F1DF4B30090EC3F /* DogsService.swift */; };
 		F7A9B4121F1DF78E0090EC3F /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A9B4111F1DF78E0090EC3F /* Dog.swift */; };
+		F7E1740D1F269FA500A01134 /* ContestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E1740C1F269FA500A01134 /* ContestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		F7A9B40D1F1DF3AA0090EC3F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F7A9B40F1F1DF4B30090EC3F /* DogsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogsService.swift; sourceTree = "<group>"; };
 		F7A9B4111F1DF78E0090EC3F /* Dog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
+		F7E1740C1F269FA500A01134 /* ContestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 				F77529E51F1EB514002BA7A7 /* HomePageViewController.swift */,
 				F77529E71F1EB581002BA7A7 /* ContactViewController.swift */,
 				F77529EB1F1EB9AC002BA7A7 /* ContestsViewController.swift */,
+				F7E1740C1F269FA500A01134 /* ContestViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -530,6 +533,7 @@
 				F7A9B4121F1DF78E0090EC3F /* Dog.swift in Sources */,
 				F7A9B3DD1F1DEF650090EC3F /* AppDelegate.swift in Sources */,
 				F7A9B40C1F1DF2480090EC3F /* BaseService.swift in Sources */,
+				F7E1740D1F269FA500A01134 /* ContestViewController.swift in Sources */,
 				F77529EC1F1EB9AC002BA7A7 /* ContestsViewController.swift in Sources */,
 				F72650771F1E10C7006AE5B1 /* HomeViewController.swift in Sources */,
 				F77529F61F1EC1E3002BA7A7 /* ContestTableViewCell.swift in Sources */,

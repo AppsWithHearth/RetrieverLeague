@@ -324,11 +324,55 @@
                     </view>
                     <connections>
                         <outlet property="contestsTableView" destination="lg8-2Y-BiK" id="tHf-fV-ena"/>
+                        <segue destination="ezw-Wj-mu3" kind="show" identifier="contestsToContestSegue" id="nqA-zf-iv9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zQk-wg-seo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1672.8" y="-47.226386806596707"/>
+        </scene>
+        <!--Contest View Controller-->
+        <scene sceneID="7M6-zG-hsx">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="ezw-Wj-mu3" customClass="ContestViewController" customModule="RetrieverLeague" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="igm-OF-HSW"/>
+                        <viewControllerLayoutGuide type="bottom" id="mkc-b1-3m4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3j1-QP-OB5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OxE-qs-vBf">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="dogCell" id="zxy-Au-Hsk">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zxy-Au-Hsk" id="Txp-DH-2qy">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mkc-b1-3m4" firstAttribute="top" secondItem="OxE-qs-vBf" secondAttribute="bottom" id="AaM-eR-pR7"/>
+                            <constraint firstItem="OxE-qs-vBf" firstAttribute="top" secondItem="igm-OF-HSW" secondAttribute="bottom" id="BMm-6r-Hg9"/>
+                            <constraint firstAttribute="trailing" secondItem="OxE-qs-vBf" secondAttribute="trailing" id="XHH-ka-wFu"/>
+                            <constraint firstItem="OxE-qs-vBf" firstAttribute="leading" secondItem="3j1-QP-OB5" secondAttribute="leading" id="s6F-dR-YPm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dogsTableView" destination="OxE-qs-vBf" id="Uia-go-Wzy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2nM-SD-yJY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2610" y="-47"/>
         </scene>
         <!--Contact View Controller-->
         <scene sceneID="yq6-D4-EBm">

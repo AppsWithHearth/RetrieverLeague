@@ -48,6 +48,19 @@ class ContestsViewController: BaseViewController, UITableViewDelegate, UITableVi
         
     }
     
+    //MARK: - Navigation 
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == Segue.contestsToContest {
+            if let contestVC = segue.destination as? ContestViewController,
+                let contest = sender as? Contest {
+                contestVC.contest = contest
+            }
+        }
+        
+    }
+    
     //MARK: - UITableViewDelegate and UITableViewDataSource methods
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -68,4 +81,13 @@ class ContestsViewController: BaseViewController, UITableViewDelegate, UITableVi
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
+        let contest = contests[indexPath.row]
+        
+        self.performSegue(withIdentifier: Segue.contestsToContest, sender: contest)
+    }
+    
 }
