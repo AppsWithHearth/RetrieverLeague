@@ -16,6 +16,7 @@ class ContestViewController: BaseViewController, UITableViewDelegate, UITableVie
         }
     }
     var dogsDict = [Int: [Dog]]()
+    var dogCategories = [Int]()
     
     @IBOutlet weak var dogsTableView: UITableView! {
         didSet {
@@ -33,6 +34,7 @@ class ContestViewController: BaseViewController, UITableViewDelegate, UITableVie
             }
             dogsDict[dog.leagueId]?.append(dog)
         }
+        dogCategories = Array(dogsDict.keys)
         dogsTableView.reloadData()
     }
 
@@ -45,25 +47,41 @@ class ContestViewController: BaseViewController, UITableViewDelegate, UITableVie
     //MARK: - UITableViewDelegate and UITableViewDataSource methods
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return dogsDict.keys.count
+        return dogCategories.count
     }
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Test"
-    }
+
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let key = Array(dogsDict.keys)[section]
+        let key = dogCategories[section]
         return dogsDict[key]?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "dogCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellID.contestDogCell, for: indexPath) as! ContestDogTableViewCell
         
-        cell.textLabel?.text = "Test"
+        let leagueId = dogCategories[indexPath.section]
+        if let dog = dogsDict[leagueId]?[indexPath.row] {
+            
+            cell.configure(with: dog, index: indexPath.row)
+            
+        }
         
         return cell
     }
 
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 30
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let sectionCell = tableView.dequeueReusableCell(withIdentifier: CellID.contestSectionCell) as! ContestSectionTableViewCell
+        
+        sectionCell.leagueNameLabel.text = LeagueHelper.categoryName(for: dogCategories[section])
+        
+        return sectionCell
+        
+    }
+    
 }

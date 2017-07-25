@@ -13,7 +13,7 @@ struct Dog {
     var id: Int
     var name: String
     var breed: String
-    var dateOfBirth: String
+    var dateOfBirth: Date?
     var ownerName: String
     var leagueId: Int
     
@@ -32,8 +32,10 @@ struct Dog {
         self.leagueId = leagueId
         
         //nullable values
-        self.dateOfBirth = json["dateOfBirth"] as? String ?? "Unknown"
         self.ownerName = json["ownerName"] as? String ?? "Unknown"
+        
+        let dateOfBirth = json["dateOfBirth"] as? String ?? "Unknown"
+        self.dateOfBirth = dateOfBirth.date(with: "yyyy-MM-dd'T'HH:mm:ss.SSSZ")
     }
     
 }

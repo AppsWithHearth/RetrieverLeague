@@ -12,7 +12,7 @@ struct Contest {
     
     var id: Int
     var name: String
-    var date: String
+    var date: Date?
     var location: String
     var dogs: [Dog]
     
@@ -29,7 +29,7 @@ struct Contest {
         self.id = id
         self.name = name
         self.location = location
-        self.date = date
+        self.date = date.date(with: "yyyy-MM-dd'T'HH:mm:ss.SSSZ")
         self.dogs = dogs.flatMap { Dog(with: $0) }
         
         

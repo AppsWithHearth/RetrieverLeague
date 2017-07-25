@@ -16,11 +16,25 @@ class BaseViewController: UIViewController {
         }
     }
     
+    let loadingIndicator: UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView()
+        indicator.hidesWhenStopped = true
+        indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.whiteLarge
+        indicator.color = .white
+        indicator.translatesAutoresizingMaskIntoConstraints = false
+        return indicator
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.setupLoadingIndicator()
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         self.view.backgroundColor = UIColor.rlLightGreen
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
 
     func setupTitleView() {
@@ -30,9 +44,22 @@ class BaseViewController: UIViewController {
         self.navigationItem.titleView = titleImageView
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    func setupLoadingIndicator() {
+        self.view.addSubview(loadingIndicator)
+        loadingIndicator.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        loadingIndicator.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
     }
+    
+   
+    func showLoading() {
+        loadingIndicator.startAnimating()
+        self.view.bringSubview(toFront: loadingIndicator)
+    }
+    
+    func hideLoading() {
+        loadingIndicator.stopAnimating()
+    }
+    
     
 
 }

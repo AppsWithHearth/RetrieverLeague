@@ -22,13 +22,8 @@ class ContestTableViewCell: UITableViewCell {
     
     func configure(with contest: Contest) {
         nameLabel.text = contest.name
-        dateLabel.text = contest.date
+        dateLabel.text = contest.date?.string(with: "dd/MM/yyyy") ?? "Unknown"
         locationLabel.text = contest.location
-        
-        let dateFormatter = ISO8601DateFormatter()
-        
-        let date = dateFormatter.date(from: contest.date)
-        print(date)
         
     }
 

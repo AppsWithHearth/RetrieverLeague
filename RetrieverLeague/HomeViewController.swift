@@ -12,8 +12,6 @@ class HomeViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        DogsService.getDogs { (error, dogsArray) in
-        }
     }
 
     override func didReceiveMemoryWarning() {

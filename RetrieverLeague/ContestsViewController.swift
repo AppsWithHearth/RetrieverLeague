@@ -36,9 +36,9 @@ class ContestsViewController: BaseViewController, UITableViewDelegate, UITableVi
     //MARK: - API Methods
     
     func getContests() {
-        
+        self.showLoading()
         ContestsService.getContests { (error, contestsArray) in
-            
+            self.hideLoading()
             if let contests = contestsArray as? [Contest] {
                 self.contests = contests
                 self.contestsTableView.reloadData()

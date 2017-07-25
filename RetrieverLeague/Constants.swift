@@ -18,6 +18,8 @@ struct Resource {
 
 struct CellID {
     static let contestCell = "contestCell"
+    static let contestDogCell = "contestDogCell"
+    static let contestSectionCell = "contestSectionCell"
 }
 
 struct Segue {
