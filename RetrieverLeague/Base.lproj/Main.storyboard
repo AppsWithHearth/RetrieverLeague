@@ -464,7 +464,7 @@
         <!--Home Page View Controller-->
         <scene sceneID="nve-XF-hT1">
             <objects>
-                <viewController id="hZA-DR-WtA" customClass="HomePageViewController" customModule="RetrieverLeague" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="hZA-DR-WtA" customClass="HomePageViewController" customModule="RetrieverLeague" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="R0a-xD-wgm"/>
                         <viewControllerLayoutGuide type="bottom" id="Z9m-K0-cM8"/>
@@ -473,21 +473,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ImY-pE-PIU">
-                                <rect key="frame" x="16" y="310" width="343" height="46"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
-                                <state key="normal" title="Open Website">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
+                            <webView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g66-MJ-OLd">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ImY-pE-PIU" firstAttribute="centerY" secondItem="FuD-gw-itx" secondAttribute="centerY" id="oUE-6j-soD"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ImY-pE-PIU" secondAttribute="trailing" id="rdE-sO-bgX"/>
-                            <constraint firstItem="ImY-pE-PIU" firstAttribute="leading" secondItem="FuD-gw-itx" secondAttribute="leadingMargin" id="vDN-sr-Sa7"/>
+                            <constraint firstItem="g66-MJ-OLd" firstAttribute="top" secondItem="R0a-xD-wgm" secondAttribute="bottom" id="6ls-ar-9Ff"/>
+                            <constraint firstAttribute="trailing" secondItem="g66-MJ-OLd" secondAttribute="trailing" id="HSa-9k-tQP"/>
+                            <constraint firstItem="Z9m-K0-cM8" firstAttribute="top" secondItem="g66-MJ-OLd" secondAttribute="bottom" id="TWg-Wk-bDc"/>
+                            <constraint firstItem="g66-MJ-OLd" firstAttribute="leading" secondItem="FuD-gw-itx" secondAttribute="leading" id="xoL-rD-YL6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="g66-MJ-OLd" id="yX7-k3-xfx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2KB-or-bfN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
