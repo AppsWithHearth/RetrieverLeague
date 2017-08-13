@@ -22,7 +22,7 @@ struct Contest {
             let name = json["name"] as? String,
             let date = json["date"] as? String,
             let location = json["location"] as? String,
-            let dogs = json["dogs"] as? [JSONObject] else {
+            let dogs = json["dogs"] as? JSONArray else {
                 return nil
         }
         
