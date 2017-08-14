@@ -16,7 +16,7 @@ struct Dog {
     var dateOfBirth: Date?
     var ownerName: String
     var leagueId: Int
-    var tasks = [Task]()
+    var tasks: [Task]?
     
     init?(with json: JSONObject) {
         
