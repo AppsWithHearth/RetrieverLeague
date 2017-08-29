@@ -1,6 +1,0 @@
-framework module Pods_RetrieverLeague {
-  umbrella header "Pods-RetrieverLeague-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -22,6 +22,7 @@ class DogsService {
         }
     
     }
+<<<<<<< HEAD
     
     static func getDogsCount(completion: @escaping CompletionHandler) {
         
@@ -40,4 +41,6 @@ class DogsService {
             }
         }
     }
+=======
+>>>>>>> 39b997f4c757e1cb418d5aa847865f7b5aedadf5
 }

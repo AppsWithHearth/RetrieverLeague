@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FoldingCell.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-RetrieverLeague.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,6 +42,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>451BFF3BDF9E9F0918293445E86FBC77</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>47DEE038BC6622FECC676921579F3F50</key>
 		<dict>
 			<key>primary</key>
@@ -48,6 +58,16 @@
 			<true/>
 		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8B200DA65730D15797A41C276E914468</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B626E472969D6F87698AF0041EAAFC38</key>
 		<dict>
 			<key>primary</key>
 			<true/>

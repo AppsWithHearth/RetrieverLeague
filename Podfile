@@ -9,6 +9,7 @@ target 'RetrieverLeague' do
   
   pod 'Alamofire', '~> 4.4'
   pod 'ResponseDetective'
+  pod 'FoldingCell', '~> 2.0.3'
   
   target 'RetrieverLeagueTests' do
     inherit! :search_paths

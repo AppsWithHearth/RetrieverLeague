@@ -14,6 +14,9 @@
 		F72650791F1E2EFC006AE5B1 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72650781F1E2EFC006AE5B1 /* BaseViewController.swift */; };
 		F726507B1F1E2F4F006AE5B1 /* UIColor+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F726507A1F1E2F4F006AE5B1 /* UIColor+Colors.swift */; };
 		F726507D1F1E3123006AE5B1 /* MoreInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F726507C1F1E3123006AE5B1 /* MoreInfoViewController.swift */; };
+		F74351861F3AC89900697FDA /* TasksService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74351851F3AC89900697FDA /* TasksService.swift */; };
+		F74351881F3AC9B200697FDA /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74351871F3AC9B200697FDA /* Task.swift */; };
+		F743518A1F3ACA6A00697FDA /* DogTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74351891F3ACA6A00697FDA /* DogTask.swift */; };
 		F77529E61F1EB514002BA7A7 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77529E51F1EB514002BA7A7 /* HomePageViewController.swift */; };
 		F77529E81F1EB581002BA7A7 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77529E71F1EB581002BA7A7 /* ContactViewController.swift */; };
 		F77529EC1F1EB9AC002BA7A7 /* ContestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77529EB1F1EB9AC002BA7A7 /* ContestsViewController.swift */; };
@@ -33,10 +36,10 @@
 		F7A9B4101F1DF4B30090EC3F /* DogsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A9B40F1F1DF4B30090EC3F /* DogsService.swift */; };
 		F7A9B4121F1DF78E0090EC3F /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A9B4111F1DF78E0090EC3F /* Dog.swift */; };
 		F7D8DAEA1F27EB8400911F6E /* ContestDogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D8DAE91F27EB8400911F6E /* ContestDogTableViewCell.swift */; };
-		F7D8DAEC1F27EDC600911F6E /* ContestSectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D8DAEB1F27EDC600911F6E /* ContestSectionTableViewCell.swift */; };
 		F7D8DAEE1F27FD1600911F6E /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D8DAED1F27FD1600911F6E /* Date+String.swift */; };
 		F7D8DAF21F27FF3700911F6E /* LeagueHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D8DAF11F27FF3700911F6E /* LeagueHelper.swift */; };
 		F7E1740D1F269FA500A01134 /* ContestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E1740C1F269FA500A01134 /* ContestViewController.swift */; };
+		F7ECD2AD1F41516F0053A8C3 /* TestResultCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ECD2AC1F41516F0053A8C3 /* TestResultCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +73,9 @@
 		F72650781F1E2EFC006AE5B1 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F726507A1F1E2F4F006AE5B1 /* UIColor+Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Colors.swift"; sourceTree = "<group>"; };
 		F726507C1F1E3123006AE5B1 /* MoreInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreInfoViewController.swift; sourceTree = "<group>"; };
+		F74351851F3AC89900697FDA /* TasksService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksService.swift; sourceTree = "<group>"; };
+		F74351871F3AC9B200697FDA /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		F74351891F3ACA6A00697FDA /* DogTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogTask.swift; sourceTree = "<group>"; };
 		F77529E51F1EB514002BA7A7 /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		F77529E71F1EB581002BA7A7 /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		F77529EB1F1EB9AC002BA7A7 /* ContestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestsViewController.swift; sourceTree = "<group>"; };
@@ -95,10 +101,10 @@
 		F7A9B40F1F1DF4B30090EC3F /* DogsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogsService.swift; sourceTree = "<group>"; };
 		F7A9B4111F1DF78E0090EC3F /* Dog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
 		F7D8DAE91F27EB8400911F6E /* ContestDogTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestDogTableViewCell.swift; sourceTree = "<group>"; };
-		F7D8DAEB1F27EDC600911F6E /* ContestSectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestSectionTableViewCell.swift; sourceTree = "<group>"; };
 		F7D8DAED1F27FD1600911F6E /* Date+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+String.swift"; sourceTree = "<group>"; };
 		F7D8DAF11F27FF3700911F6E /* LeagueHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeagueHelper.swift; sourceTree = "<group>"; };
 		F7E1740C1F269FA500A01134 /* ContestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestViewController.swift; sourceTree = "<group>"; };
+		F7ECD2AC1F41516F0053A8C3 /* TestResultCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestResultCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,7 +186,7 @@
 			children = (
 				F77529F51F1EC1E3002BA7A7 /* ContestTableViewCell.swift */,
 				F7D8DAE91F27EB8400911F6E /* ContestDogTableViewCell.swift */,
-				F7D8DAEB1F27EDC600911F6E /* ContestSectionTableViewCell.swift */,
+				F7ECD2AC1F41516F0053A8C3 /* TestResultCollectionViewCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -250,6 +256,7 @@
 				F7A9B40B1F1DF2480090EC3F /* BaseService.swift */,
 				F7A9B40F1F1DF4B30090EC3F /* DogsService.swift */,
 				F77529ED1F1EBA10002BA7A7 /* ContestsService.swift */,
+				F74351851F3AC89900697FDA /* TasksService.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -259,7 +266,12 @@
 			children = (
 				F7A9B4111F1DF78E0090EC3F /* Dog.swift */,
 				F77529F11F1EBA69002BA7A7 /* Contest.swift */,
+<<<<<<< HEAD
 				F77E42591F5621FD0048AB51 /* Scalar.swift */,
+=======
+				F74351871F3AC9B200697FDA /* Task.swift */,
+				F74351891F3ACA6A00697FDA /* DogTask.swift */,
+>>>>>>> 39b997f4c757e1cb418d5aa847865f7b5aedadf5
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -566,12 +578,14 @@
 				F7D8DAEE1F27FD1600911F6E /* Date+String.swift in Sources */,
 				F726507B1F1E2F4F006AE5B1 /* UIColor+Colors.swift in Sources */,
 				F7A9B4121F1DF78E0090EC3F /* Dog.swift in Sources */,
+				F74351881F3AC9B200697FDA /* Task.swift in Sources */,
 				F7A9B3DD1F1DEF650090EC3F /* AppDelegate.swift in Sources */,
 				F7A9B40C1F1DF2480090EC3F /* BaseService.swift in Sources */,
 				F77E42581F560D470048AB51 /* StatisticsViewController.swift in Sources */,
 				F7E1740D1F269FA500A01134 /* ContestViewController.swift in Sources */,
 				F77529EC1F1EB9AC002BA7A7 /* ContestsViewController.swift in Sources */,
 				F72650771F1E10C7006AE5B1 /* HomeViewController.swift in Sources */,
+				F743518A1F3ACA6A00697FDA /* DogTask.swift in Sources */,
 				F77529F61F1EC1E3002BA7A7 /* ContestTableViewCell.swift in Sources */,
 				F7D8DAEA1F27EB8400911F6E /* ContestDogTableViewCell.swift in Sources */,
 				F77529EE1F1EBA10002BA7A7 /* ContestsService.swift in Sources */,
@@ -581,9 +595,14 @@
 				F77529E61F1EB514002BA7A7 /* HomePageViewController.swift in Sources */,
 				F7D8DAF21F27FF3700911F6E /* LeagueHelper.swift in Sources */,
 				F77529F21F1EBA69002BA7A7 /* Contest.swift in Sources */,
+<<<<<<< HEAD
 				F77E425A1F5621FD0048AB51 /* Scalar.swift in Sources */,
 				F7D8DAEC1F27EDC600911F6E /* ContestSectionTableViewCell.swift in Sources */,
+=======
+				F74351861F3AC89900697FDA /* TasksService.swift in Sources */,
+>>>>>>> 39b997f4c757e1cb418d5aa847865f7b5aedadf5
 				F7A9B40E1F1DF3AA0090EC3F /* Constants.swift in Sources */,
+				F7ECD2AD1F41516F0053A8C3 /* TestResultCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
