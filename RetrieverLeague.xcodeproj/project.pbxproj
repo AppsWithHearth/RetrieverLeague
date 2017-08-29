@@ -266,12 +266,9 @@
 			children = (
 				F7A9B4111F1DF78E0090EC3F /* Dog.swift */,
 				F77529F11F1EBA69002BA7A7 /* Contest.swift */,
-<<<<<<< HEAD
 				F77E42591F5621FD0048AB51 /* Scalar.swift */,
-=======
 				F74351871F3AC9B200697FDA /* Task.swift */,
 				F74351891F3ACA6A00697FDA /* DogTask.swift */,
->>>>>>> 39b997f4c757e1cb418d5aa847865f7b5aedadf5
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -595,12 +592,9 @@
 				F77529E61F1EB514002BA7A7 /* HomePageViewController.swift in Sources */,
 				F7D8DAF21F27FF3700911F6E /* LeagueHelper.swift in Sources */,
 				F77529F21F1EBA69002BA7A7 /* Contest.swift in Sources */,
-<<<<<<< HEAD
 				F77E425A1F5621FD0048AB51 /* Scalar.swift in Sources */,
 				F7D8DAEC1F27EDC600911F6E /* ContestSectionTableViewCell.swift in Sources */,
-=======
 				F74351861F3AC89900697FDA /* TasksService.swift in Sources */,
->>>>>>> 39b997f4c757e1cb418d5aa847865f7b5aedadf5
 				F7A9B40E1F1DF3AA0090EC3F /* Constants.swift in Sources */,
 				F7ECD2AD1F41516F0053A8C3 /* TestResultCollectionViewCell.swift in Sources */,
 			);

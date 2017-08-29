@@ -14,13 +14,10 @@ let baseUrl = "https://retriever-league.herokuapp.com"
 struct Resource {
     static let dogs = "/dogs"
     static let contests = "/contests"
-<<<<<<< HEAD
     static let count = "/count/all"
     static let dogsCount = Resource.dogs + Resource.count
     static let contestsCount = Resource.contests + Resource.count
-=======
     static let tasks = "/tasks"
->>>>>>> 39b997f4c757e1cb418d5aa847865f7b5aedadf5
 }
 
 struct CellID {
