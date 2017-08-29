@@ -23,4 +23,21 @@ class DogsService {
     
     }
     
+    static func getDogsCount(completion: @escaping CompletionHandler) {
+        
+        BaseService.get(resource: Resource.dogsCount) { (error, json) in
+            
+            if let error = error {
+                completion(error, nil)
+                return
+            }
+            
+            if let jsonObject = json as? JSONObject {
+                let countScalar = Scalar(with: jsonObject)
+                completion(nil, countScalar)
+            } else {
+                completion(nil, nil)
+            }
+        }
+    }
 }

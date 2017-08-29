@@ -20,6 +20,8 @@
 		F77529EE1F1EBA10002BA7A7 /* ContestsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77529ED1F1EBA10002BA7A7 /* ContestsService.swift */; };
 		F77529F21F1EBA69002BA7A7 /* Contest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77529F11F1EBA69002BA7A7 /* Contest.swift */; };
 		F77529F61F1EC1E3002BA7A7 /* ContestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77529F51F1EC1E3002BA7A7 /* ContestTableViewCell.swift */; };
+		F77E42581F560D470048AB51 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77E42571F560D470048AB51 /* StatisticsViewController.swift */; };
+		F77E425A1F5621FD0048AB51 /* Scalar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77E42591F5621FD0048AB51 /* Scalar.swift */; };
 		F7A9B3DD1F1DEF650090EC3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A9B3DC1F1DEF650090EC3F /* AppDelegate.swift */; };
 		F7A9B3E21F1DEF650090EC3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7A9B3E01F1DEF650090EC3F /* Main.storyboard */; };
 		F7A9B3E41F1DEF650090EC3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7A9B3E31F1DEF650090EC3F /* Assets.xcassets */; };
@@ -74,6 +76,8 @@
 		F77529ED1F1EBA10002BA7A7 /* ContestsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestsService.swift; sourceTree = "<group>"; };
 		F77529F11F1EBA69002BA7A7 /* Contest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contest.swift; sourceTree = "<group>"; };
 		F77529F51F1EC1E3002BA7A7 /* ContestTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestTableViewCell.swift; sourceTree = "<group>"; };
+		F77E42571F560D470048AB51 /* StatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
+		F77E42591F5621FD0048AB51 /* Scalar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scalar.swift; sourceTree = "<group>"; };
 		F7A9B3D91F1DEF650090EC3F /* RetrieverLeague.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetrieverLeague.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7A9B3DC1F1DEF650090EC3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7A9B3E11F1DEF650090EC3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -158,6 +162,7 @@
 				F77529E71F1EB581002BA7A7 /* ContactViewController.swift */,
 				F77529EB1F1EB9AC002BA7A7 /* ContestsViewController.swift */,
 				F7E1740C1F269FA500A01134 /* ContestViewController.swift */,
+				F77E42571F560D470048AB51 /* StatisticsViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -254,6 +259,7 @@
 			children = (
 				F7A9B4111F1DF78E0090EC3F /* Dog.swift */,
 				F77529F11F1EBA69002BA7A7 /* Contest.swift */,
+				F77E42591F5621FD0048AB51 /* Scalar.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -562,6 +568,7 @@
 				F7A9B4121F1DF78E0090EC3F /* Dog.swift in Sources */,
 				F7A9B3DD1F1DEF650090EC3F /* AppDelegate.swift in Sources */,
 				F7A9B40C1F1DF2480090EC3F /* BaseService.swift in Sources */,
+				F77E42581F560D470048AB51 /* StatisticsViewController.swift in Sources */,
 				F7E1740D1F269FA500A01134 /* ContestViewController.swift in Sources */,
 				F77529EC1F1EB9AC002BA7A7 /* ContestsViewController.swift in Sources */,
 				F72650771F1E10C7006AE5B1 /* HomeViewController.swift in Sources */,
@@ -574,6 +581,7 @@
 				F77529E61F1EB514002BA7A7 /* HomePageViewController.swift in Sources */,
 				F7D8DAF21F27FF3700911F6E /* LeagueHelper.swift in Sources */,
 				F77529F21F1EBA69002BA7A7 /* Contest.swift in Sources */,
+				F77E425A1F5621FD0048AB51 /* Scalar.swift in Sources */,
 				F7D8DAEC1F27EDC600911F6E /* ContestSectionTableViewCell.swift in Sources */,
 				F7A9B40E1F1DF3AA0090EC3F /* Constants.swift in Sources */,
 			);

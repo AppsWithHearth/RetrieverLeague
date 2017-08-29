@@ -31,4 +31,22 @@ class ContestsService {
         
     }
     
+    static func getContestsCount(completion: @escaping CompletionHandler) {
+        
+        BaseService.get(resource: Resource.contestsCount) { (error, json) in
+            
+            if let error = error {
+                completion(error, nil)
+                return
+            }
+            
+            if let jsonObject = json as? JSONObject {
+                let countScalar = Scalar(with: jsonObject)
+                completion(nil, countScalar)
+            } else {
+                completion(nil, nil)
+            }
+        }
+    }
+    
 }
