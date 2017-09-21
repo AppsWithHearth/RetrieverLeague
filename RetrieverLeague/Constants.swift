@@ -18,6 +18,7 @@ struct Resource {
     static let dogsCount = Resource.dogs + Resource.count
     static let contestsCount = Resource.contests + Resource.count
     static let tasks = "/tasks"
+    static let contactMessages = "/contactMessages"
 }
 
 struct CellID {

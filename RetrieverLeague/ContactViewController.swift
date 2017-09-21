@@ -10,6 +10,9 @@ import UIKit
 
 class ContactViewController: BaseViewController {
 
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var messageTextView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,8 +21,22 @@ class ContactViewController: BaseViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
  
+    @IBAction func sendButtonTapped(_ sender: UIButton) {
+        
+        guard let email = emailTextField.text,
+            !messageTextView.text.isEmpty else {
+                ErrorHelper.showAlert(title: "Error", message: "Please fill out all fields.", from: self)
+                return
+        }
+        
+        self.showLoading()
+        MessagesService.sendContactMessage(email: email, message: messageTextView.text) { (error, messageResponse) in
+            self.hideLoading()
+        }
+    }
+    
 
 }

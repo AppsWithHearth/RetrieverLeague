@@ -49,6 +49,28 @@ class BaseService {
                     completion(error, nil)
                 }
         }
-        
+    }
+    
+    static func post(resource: String, parameters: Parameters? = [:], completion: @escaping CompletionHandler) {
+        sessionManager.request(baseUrl + resource, method: .post,
+                               parameters: parameters)
+            .validate()
+            .responseData { (response) in
+                switch response.result {
+                case .success:
+                    guard let responseData = response.data else {
+                        completion(nil, nil)
+                        return
+                    }
+                    do {
+                        let json = try JSONSerialization.jsonObject(with: responseData, options: .allowFragments)
+                        completion(nil, json)
+                    } catch let error {
+                        completion(error, nil)
+                    }
+                case .failure(let error):
+                    completion(error, nil)
+                }
+        }
     }
 }
