@@ -37,14 +37,20 @@ class ContestViewController: BaseViewController, UITableViewDelegate, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        for (index, dog) in contest.dogs.enumerated() {
+        for dog in contest.dogs {
             if dogsDict[dog.leagueId] == nil {
                 dogsDict[dog.leagueId] = [Dog]()
-                cellHeights[index] = [CGFloat]()
             }
-            cellHeights[index]?.append(C.CellHeight.close)
             dogsDict[dog.leagueId]?.append(dog)
         }
+        
+        var index = 0
+        for key in dogsDict.keys {
+//            cellHeights[index] = [CGFloat]()
+            cellHeights[index] = dogsDict[key]?.map { _ in return C.CellHeight.close }
+            index += 1
+        }
+        
         dogCategories = Array(dogsDict.keys)
         dogsTableView.reloadData()
     }    
@@ -124,7 +130,7 @@ class ContestViewController: BaseViewController, UITableViewDelegate, UITableVie
             duration = 0.5
         }
         
-        UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut, animations: { _ in
+        UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut, animations: { 
             self.dogsTableView.beginUpdates()
             self.dogsTableView.endUpdates()
         }, completion: nil)
