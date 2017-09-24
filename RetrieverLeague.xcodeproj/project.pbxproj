@@ -17,6 +17,7 @@
 		F74351861F3AC89900697FDA /* TasksService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74351851F3AC89900697FDA /* TasksService.swift */; };
 		F74351881F3AC9B200697FDA /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74351871F3AC9B200697FDA /* Task.swift */; };
 		F743518A1F3ACA6A00697FDA /* DogTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74351891F3ACA6A00697FDA /* DogTask.swift */; };
+		F766457A1F78250B002B1643 /* UIView+IB.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76645791F78250B002B1643 /* UIView+IB.swift */; };
 		F77529E61F1EB514002BA7A7 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77529E51F1EB514002BA7A7 /* HomePageViewController.swift */; };
 		F77529E81F1EB581002BA7A7 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77529E71F1EB581002BA7A7 /* ContactViewController.swift */; };
 		F77529EC1F1EB9AC002BA7A7 /* ContestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77529EB1F1EB9AC002BA7A7 /* ContestsViewController.swift */; };
@@ -78,6 +79,7 @@
 		F74351851F3AC89900697FDA /* TasksService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksService.swift; sourceTree = "<group>"; };
 		F74351871F3AC9B200697FDA /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		F74351891F3ACA6A00697FDA /* DogTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogTask.swift; sourceTree = "<group>"; };
+		F76645791F78250B002B1643 /* UIView+IB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+IB.swift"; sourceTree = "<group>"; };
 		F77529E51F1EB514002BA7A7 /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		F77529E71F1EB581002BA7A7 /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		F77529EB1F1EB9AC002BA7A7 /* ContestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestsViewController.swift; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 			children = (
 				F726507A1F1E2F4F006AE5B1 /* UIColor+Colors.swift */,
 				F7D8DAED1F27FD1600911F6E /* Date+String.swift */,
+				F76645791F78250B002B1643 /* UIView+IB.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -581,6 +584,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7A9B4101F1DF4B30090EC3F /* DogsService.swift in Sources */,
+				F766457A1F78250B002B1643 /* UIView+IB.swift in Sources */,
 				F7D8DAEE1F27FD1600911F6E /* Date+String.swift in Sources */,
 				F726507B1F1E2F4F006AE5B1 /* UIColor+Colors.swift in Sources */,
 				F7A9B4121F1DF78E0090EC3F /* Dog.swift in Sources */,

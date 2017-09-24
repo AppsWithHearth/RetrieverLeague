@@ -37,6 +37,10 @@ class BaseViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     func setupTitleView() {
         let titleImageView = UIImageView(image: titleImage)
         titleImageView.frame.size = CGSize(width: 200, height: 40)
@@ -51,7 +55,8 @@ class BaseViewController: UIViewController {
     }
     
    
-    func showLoading() {
+    func showLoading(color: UIColor = .white) {
+        loadingIndicator.color = color
         loadingIndicator.startAnimating()
         self.view.bringSubview(toFront: loadingIndicator)
     }

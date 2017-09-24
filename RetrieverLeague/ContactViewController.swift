@@ -12,11 +12,14 @@ class ContactViewController: BaseViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var messageTextView: UITextView!
+    @IBOutlet weak var successView: UIView!
+    @IBOutlet weak var contactView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.titleImage = #imageLiteral(resourceName: "icon_contact")
+        successView.isHidden = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,10 +35,16 @@ class ContactViewController: BaseViewController {
                 return
         }
         
-        self.showLoading()
+        self.showLoading(color: .darkGray)
         MessagesService.sendContactMessage(email: email, message: messageTextView.text) { (error, messageResponse) in
+            self.successView.isHidden = false
+            self.contactView.isHidden = true
             self.hideLoading()
         }
+    }
+    
+    @IBAction func goBackButtonTapped(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
     }
     
 
