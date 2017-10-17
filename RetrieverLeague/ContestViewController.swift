@@ -24,7 +24,7 @@ class ContestViewController: BaseViewController, UITableViewDelegate, UITableVie
         }
     }
     var dogsDict = [Int: [Dog]]()
-    var dogCategories = [Int]()
+    var dogLeagues = [League]()
     var cellHeights = [Int: [CGFloat]]()
     
     @IBOutlet weak var dogsTableView: UITableView! {
@@ -37,33 +37,34 @@ class ContestViewController: BaseViewController, UITableViewDelegate, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         for dog in contest.dogs {
-            if dogsDict[dog.leagueId] == nil {
-                dogsDict[dog.leagueId] = [Dog]()
+            if dogsDict[dog.league.id] == nil {
+                dogsDict[dog.league.id] = [Dog]()
+                dogLeagues.append(dog.league)
             }
-            dogsDict[dog.leagueId]?.append(dog)
+            dogsDict[dog.league.id]?.append(dog)
         }
         
         var index = 0
-        for key in dogsDict.keys {
+        for league in dogLeagues {
 //            cellHeights[index] = [CGFloat]()
-            cellHeights[index] = dogsDict[key]?.map { _ in return C.CellHeight.close }
+            cellHeights[index] = dogsDict[league.id]?.map { _ in return C.CellHeight.close }
             index += 1
         }
         
-        dogCategories = Array(dogsDict.keys)
         dogsTableView.reloadData()
     }    
 
     //MARK: - UITableViewDelegate and UITableViewDataSource methods
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return dogCategories.count
+        return dogLeagues.count
     }
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let key = dogCategories[section]
+        let key = dogLeagues[section].id
         return dogsDict[key]?.count ?? 0
     }
     
@@ -76,7 +77,7 @@ class ContestViewController: BaseViewController, UITableViewDelegate, UITableVie
         
         let cell = tableView.dequeueReusableCell(withIdentifier: CellID.contestDogCell, for: indexPath) as! ContestDogTableViewCell
         
-        let leagueId = dogCategories[indexPath.section]
+        let leagueId = dogLeagues[indexPath.section].id
         if let dog = dogsDict[leagueId]?[indexPath.row] {
             
             cell.configure(with: dog, index: indexPath.row)
@@ -90,7 +91,7 @@ class ContestViewController: BaseViewController, UITableViewDelegate, UITableVie
         
         let cell = tableView.cellForRow(at: indexPath) as! ContestDogTableViewCell
         
-        let leagueId = dogCategories[indexPath.section]
+        let leagueId = dogLeagues[indexPath.section].id
         
         if var dog = dogsDict[leagueId]?[indexPath.row] {
             
@@ -159,7 +160,7 @@ class ContestViewController: BaseViewController, UITableViewDelegate, UITableVie
         
         let leagueNameLabel = UILabel()
         headerView.addSubview(leagueNameLabel)
-        leagueNameLabel.text = LeagueHelper.categoryName(for: dogCategories[section])
+        leagueNameLabel.text = dogLeagues[section].name
         leagueNameLabel.font = UIFont.boldSystemFont(ofSize: 18)
         leagueNameLabel.textColor = .white
         

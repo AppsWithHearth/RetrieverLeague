@@ -409,7 +409,7 @@
                                                     <subviews>
                                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ct7-ru-3s6">
                                                             <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
-                                                            <color key="backgroundColor" red="0.027450980390000001" green="0.63921568630000003" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="backgroundColor" red="0.11026767749657299" green="0.7961263344305699" blue="0.36346854897344422" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="4" minimumInteritemSpacing="4" id="Wuc-gm-NbZ">
                                                                 <size key="itemSize" width="70" height="41"/>
                                                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -443,7 +443,7 @@
                                                             </cells>
                                                         </collectionView>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.027450980390000001" green="0.63921568630000003" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.049015436359999998" green="0.9855086207" blue="0.52312485019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="Ct7-ru-3s6" secondAttribute="trailing" id="EqE-OQ-3hC"/>
                                                         <constraint firstAttribute="bottom" secondItem="Ct7-ru-3s6" secondAttribute="bottom" id="Kht-0m-x5t"/>

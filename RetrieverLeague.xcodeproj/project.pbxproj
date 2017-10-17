@@ -38,6 +38,7 @@
 		F7A9B4121F1DF78E0090EC3F /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A9B4111F1DF78E0090EC3F /* Dog.swift */; };
 		F7BAB0791F746A7600DC8FC7 /* MessagesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BAB0781F746A7600DC8FC7 /* MessagesService.swift */; };
 		F7BAB07B1F746F1400DC8FC7 /* ErrorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BAB07A1F746F1400DC8FC7 /* ErrorHelper.swift */; };
+		F7D75A361F969F87002D36E4 /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D75A351F969F87002D36E4 /* League.swift */; };
 		F7D8DAEA1F27EB8400911F6E /* ContestDogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D8DAE91F27EB8400911F6E /* ContestDogTableViewCell.swift */; };
 		F7D8DAEE1F27FD1600911F6E /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D8DAED1F27FD1600911F6E /* Date+String.swift */; };
 		F7D8DAF21F27FF3700911F6E /* LeagueHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D8DAF11F27FF3700911F6E /* LeagueHelper.swift */; };
@@ -106,6 +107,7 @@
 		F7A9B4111F1DF78E0090EC3F /* Dog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
 		F7BAB0781F746A7600DC8FC7 /* MessagesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesService.swift; sourceTree = "<group>"; };
 		F7BAB07A1F746F1400DC8FC7 /* ErrorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHelper.swift; sourceTree = "<group>"; };
+		F7D75A351F969F87002D36E4 /* League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
 		F7D8DAE91F27EB8400911F6E /* ContestDogTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestDogTableViewCell.swift; sourceTree = "<group>"; };
 		F7D8DAED1F27FD1600911F6E /* Date+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+String.swift"; sourceTree = "<group>"; };
 		F7D8DAF11F27FF3700911F6E /* LeagueHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeagueHelper.swift; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 				F77E42591F5621FD0048AB51 /* Scalar.swift */,
 				F74351871F3AC9B200697FDA /* Task.swift */,
 				F74351891F3ACA6A00697FDA /* DogTask.swift */,
+				F7D75A351F969F87002D36E4 /* League.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -587,6 +590,7 @@
 				F766457A1F78250B002B1643 /* UIView+IB.swift in Sources */,
 				F7D8DAEE1F27FD1600911F6E /* Date+String.swift in Sources */,
 				F726507B1F1E2F4F006AE5B1 /* UIColor+Colors.swift in Sources */,
+				F7D75A361F969F87002D36E4 /* League.swift in Sources */,
 				F7A9B4121F1DF78E0090EC3F /* Dog.swift in Sources */,
 				F74351881F3AC9B200697FDA /* Task.swift in Sources */,
 				F7A9B3DD1F1DEF650090EC3F /* AppDelegate.swift in Sources */,

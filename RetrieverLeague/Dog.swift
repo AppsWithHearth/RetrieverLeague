@@ -15,7 +15,7 @@ struct Dog {
     var breed: String
     var dateOfBirth: Date?
     var ownerName: String
-    var leagueId: Int
+    var league: League
     var tasks: [Task]?
     
     init?(with json: JSONObject) {
@@ -23,14 +23,14 @@ struct Dog {
         guard let id = json["id"] as? Int,
             let name = json["name"] as? String,
             let breed = json["breed"] as? String,
-            let leagueId = json["leagueId"] as? Int else {
+            let league = json["league"] as? JSONObject else {
                 return nil
         }
         
         self.id = id
         self.name = name
         self.breed = breed
-        self.leagueId = leagueId
+        self.league = League(with: league) ?? League(id: -1, name: "Uncategorized")
         
         //nullable values
         self.ownerName = json["ownerName"] as? String ?? "Unknown"
