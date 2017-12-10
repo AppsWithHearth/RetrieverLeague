@@ -43,6 +43,8 @@
 		F7D8DAEE1F27FD1600911F6E /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D8DAED1F27FD1600911F6E /* Date+String.swift */; };
 		F7D8DAF21F27FF3700911F6E /* LeagueHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D8DAF11F27FF3700911F6E /* LeagueHelper.swift */; };
 		F7E1740D1F269FA500A01134 /* ContestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E1740C1F269FA500A01134 /* ContestViewController.swift */; };
+		F7EAD8481FDDBD190054329D /* LeaguesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EAD8471FDDBD190054329D /* LeaguesViewController.swift */; };
+		F7EAD84A1FDDBFF50054329D /* LeaguesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EAD8491FDDBFF50054329D /* LeaguesService.swift */; };
 		F7ECD2AD1F41516F0053A8C3 /* TestResultCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ECD2AC1F41516F0053A8C3 /* TestResultCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -112,6 +114,8 @@
 		F7D8DAED1F27FD1600911F6E /* Date+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+String.swift"; sourceTree = "<group>"; };
 		F7D8DAF11F27FF3700911F6E /* LeagueHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeagueHelper.swift; sourceTree = "<group>"; };
 		F7E1740C1F269FA500A01134 /* ContestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestViewController.swift; sourceTree = "<group>"; };
+		F7EAD8471FDDBD190054329D /* LeaguesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesViewController.swift; sourceTree = "<group>"; };
+		F7EAD8491FDDBFF50054329D /* LeaguesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesService.swift; sourceTree = "<group>"; };
 		F7ECD2AC1F41516F0053A8C3 /* TestResultCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestResultCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -177,6 +181,7 @@
 				F77529EB1F1EB9AC002BA7A7 /* ContestsViewController.swift */,
 				F7E1740C1F269FA500A01134 /* ContestViewController.swift */,
 				F77E42571F560D470048AB51 /* StatisticsViewController.swift */,
+				F7EAD8471FDDBD190054329D /* LeaguesViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -266,6 +271,7 @@
 				F77529ED1F1EBA10002BA7A7 /* ContestsService.swift */,
 				F74351851F3AC89900697FDA /* TasksService.swift */,
 				F7BAB0781F746A7600DC8FC7 /* MessagesService.swift */,
+				F7EAD8491FDDBFF50054329D /* LeaguesService.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -450,13 +456,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RetrieverLeagueUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		50EE9320DA31A9178AA02DB3 /* [CP] Copy Pods Resources */ = {
@@ -495,9 +504,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RetrieverLeague/Pods-RetrieverLeague-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/FoldingCell/FoldingCell.framework",
+				"${BUILT_PRODUCTS_DIR}/ResponseDetective/ResponseDetective.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FoldingCell.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ResponseDetective.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -510,13 +526,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RetrieverLeagueTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EA0ACC2920A74A7A19A4C469 /* [CP] Embed Pods Frameworks */ = {
@@ -570,13 +589,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RetrieverLeague-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -603,6 +625,7 @@
 				F77529F61F1EC1E3002BA7A7 /* ContestTableViewCell.swift in Sources */,
 				F7BAB0791F746A7600DC8FC7 /* MessagesService.swift in Sources */,
 				F7D8DAEA1F27EB8400911F6E /* ContestDogTableViewCell.swift in Sources */,
+				F7EAD8481FDDBD190054329D /* LeaguesViewController.swift in Sources */,
 				F77529EE1F1EBA10002BA7A7 /* ContestsService.swift in Sources */,
 				F77529E81F1EB581002BA7A7 /* ContactViewController.swift in Sources */,
 				F726507D1F1E3123006AE5B1 /* MoreInfoViewController.swift in Sources */,
@@ -611,6 +634,7 @@
 				F77529E61F1EB514002BA7A7 /* HomePageViewController.swift in Sources */,
 				F7D8DAF21F27FF3700911F6E /* LeagueHelper.swift in Sources */,
 				F77529F21F1EBA69002BA7A7 /* Contest.swift in Sources */,
+				F7EAD84A1FDDBFF50054329D /* LeaguesService.swift in Sources */,
 				F77E425A1F5621FD0048AB51 /* Scalar.swift in Sources */,
 				F74351861F3AC89900697FDA /* TasksService.swift in Sources */,
 				F7A9B40E1F1DF3AA0090EC3F /* Constants.swift in Sources */,
@@ -785,7 +809,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.UrosZivaljevic.RetrieverLeague;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -799,7 +823,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.UrosZivaljevic.RetrieverLeague;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
@@ -814,7 +838,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.UrosZivaljevic.RetrieverLeagueTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RetrieverLeague.app/RetrieverLeague";
 			};
@@ -830,7 +854,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.UrosZivaljevic.RetrieverLeagueTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RetrieverLeague.app/RetrieverLeague";
 			};
@@ -845,7 +869,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.UrosZivaljevic.RetrieverLeagueUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = RetrieverLeague;
 			};
@@ -860,7 +884,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.UrosZivaljevic.RetrieverLeagueUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = RetrieverLeague;
 			};

@@ -19,12 +19,14 @@ struct Resource {
     static let contestsCount = Resource.contests + Resource.count
     static let tasks = "/tasks"
     static let contactMessages = "/contactMessages"
+    static let leagues = "/leagues"
 }
 
 struct CellID {
     static let contestCell = "contestCell"
     static let contestDogCell = "contestDogCell"
     static let testResultCell = "testResultCell"
+    static let leagueCell = "leagueCell"
 }
 
 struct Segue {
