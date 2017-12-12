@@ -1,18 +1,18 @@
 PODS:
-  - Alamofire (4.5.0)
-  - FoldingCell (2.0.5)
-  - ResponseDetective (1.1)
+  - Alamofire (4.6.0)
+  - FoldingCell (3.0.0)
+  - ResponseDetective (1.2.2)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
-  - FoldingCell (~> 2.0.3)
+  - FoldingCell (~> 3.0.0)
   - ResponseDetective
 
 SPEC CHECKSUMS:
-  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
-  FoldingCell: fb189fc746e95b722a1debf8ef455006b70cae2e
-  ResponseDetective: 58281558cda442747b3c4c711edf20b647018240
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  FoldingCell: 55e9fcac546acc2c8f110f210af892aa90032160
+  ResponseDetective: 2a1ddb19b895677d418cd1a83c9595a405012b57
 
-PODFILE CHECKSUM: 232b5d37faeaacc1e6b533d6b0a04469c9a5f492
+PODFILE CHECKSUM: f311c0bcd691f34d50c915fcd8a096437fa55b3f
 
 COCOAPODS: 1.3.1

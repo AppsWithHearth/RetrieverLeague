@@ -10,9 +10,10 @@ import Foundation
 
 class DogsService {
     
-    static func getDogs(completion: @escaping CompletionHandler) {
+    static func getDogs(leagueId: Int, completion: @escaping CompletionHandler) {
    
-        BaseService.get(resource: Resource.dogs) { (error, json) in
+        let resource = "\(Resource.dogs)?leagueId=\(leagueId)"
+        BaseService.get(resource: resource) { (error, json) in
             if let jsonArray = json as? JSONArray {
                 let dogs = jsonArray.map {
                     return Dog(with: $0)

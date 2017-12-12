@@ -38,6 +38,8 @@
 		F7A9B4121F1DF78E0090EC3F /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A9B4111F1DF78E0090EC3F /* Dog.swift */; };
 		F7BAB0791F746A7600DC8FC7 /* MessagesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BAB0781F746A7600DC8FC7 /* MessagesService.swift */; };
 		F7BAB07B1F746F1400DC8FC7 /* ErrorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BAB07A1F746F1400DC8FC7 /* ErrorHelper.swift */; };
+		F7CF233E1FE08B1300E83065 /* DogContest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF233D1FE08B1300E83065 /* DogContest.swift */; };
+		F7CF23401FE08B7E00E83065 /* LeagueScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF233F1FE08B7E00E83065 /* LeagueScoresViewController.swift */; };
 		F7D75A361F969F87002D36E4 /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D75A351F969F87002D36E4 /* League.swift */; };
 		F7D8DAEA1F27EB8400911F6E /* ContestDogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D8DAE91F27EB8400911F6E /* ContestDogTableViewCell.swift */; };
 		F7D8DAEE1F27FD1600911F6E /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D8DAED1F27FD1600911F6E /* Date+String.swift */; };
@@ -109,6 +111,8 @@
 		F7A9B4111F1DF78E0090EC3F /* Dog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
 		F7BAB0781F746A7600DC8FC7 /* MessagesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesService.swift; sourceTree = "<group>"; };
 		F7BAB07A1F746F1400DC8FC7 /* ErrorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHelper.swift; sourceTree = "<group>"; };
+		F7CF233D1FE08B1300E83065 /* DogContest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogContest.swift; sourceTree = "<group>"; };
+		F7CF233F1FE08B7E00E83065 /* LeagueScoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueScoresViewController.swift; sourceTree = "<group>"; };
 		F7D75A351F969F87002D36E4 /* League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
 		F7D8DAE91F27EB8400911F6E /* ContestDogTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestDogTableViewCell.swift; sourceTree = "<group>"; };
 		F7D8DAED1F27FD1600911F6E /* Date+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+String.swift"; sourceTree = "<group>"; };
@@ -182,6 +186,7 @@
 				F7E1740C1F269FA500A01134 /* ContestViewController.swift */,
 				F77E42571F560D470048AB51 /* StatisticsViewController.swift */,
 				F7EAD8471FDDBD190054329D /* LeaguesViewController.swift */,
+				F7CF233F1FE08B7E00E83065 /* LeagueScoresViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -285,6 +290,7 @@
 				F74351871F3AC9B200697FDA /* Task.swift */,
 				F74351891F3ACA6A00697FDA /* DogTask.swift */,
 				F7D75A351F969F87002D36E4 /* League.swift */,
+				F7CF233D1FE08B1300E83065 /* DogContest.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -613,6 +619,7 @@
 				F7D8DAEE1F27FD1600911F6E /* Date+String.swift in Sources */,
 				F726507B1F1E2F4F006AE5B1 /* UIColor+Colors.swift in Sources */,
 				F7D75A361F969F87002D36E4 /* League.swift in Sources */,
+				F7CF233E1FE08B1300E83065 /* DogContest.swift in Sources */,
 				F7A9B4121F1DF78E0090EC3F /* Dog.swift in Sources */,
 				F74351881F3AC9B200697FDA /* Task.swift in Sources */,
 				F7A9B3DD1F1DEF650090EC3F /* AppDelegate.swift in Sources */,
@@ -638,6 +645,7 @@
 				F77E425A1F5621FD0048AB51 /* Scalar.swift in Sources */,
 				F74351861F3AC89900697FDA /* TasksService.swift in Sources */,
 				F7A9B40E1F1DF3AA0090EC3F /* Constants.swift in Sources */,
+				F7CF23401FE08B7E00E83065 /* LeagueScoresViewController.swift in Sources */,
 				F7ECD2AD1F41516F0053A8C3 /* TestResultCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

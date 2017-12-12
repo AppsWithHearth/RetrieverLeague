@@ -17,6 +17,7 @@ struct Dog {
     var ownerName: String
     var league: League
     var tasks: [Task]?
+    var contests = [Contest]()
     
     init?(with json: JSONObject) {
         
@@ -37,6 +38,10 @@ struct Dog {
         
         let dateOfBirth = json["dateOfBirth"] as? String ?? "Unknown"
         self.dateOfBirth = dateOfBirth.date(with: "yyyy-MM-dd'T'HH:mm:ss.SSSZ")
+        
+        if let contestsJson = json["contests"] as? JSONArray {
+            self.contests = contestsJson.flatMap { Contest(with: $0) }
+        }
     }
     
 }

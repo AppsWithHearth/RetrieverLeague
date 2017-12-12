@@ -302,11 +302,65 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="znP-Ux-fcM" id="BFN-4e-qgP"/>
+                        <segue destination="VVn-ws-w40" kind="show" identifier="leagueToLeagueScoresSegue" id="eQN-A8-Ppe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tpr-sG-x3O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="910" y="-670"/>
+        </scene>
+        <!--League Scores View Controller-->
+        <scene sceneID="lj1-2N-x7p">
+            <objects>
+                <viewController id="VVn-ws-w40" customClass="LeagueScoresViewController" customModule="RetrieverLeague" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="k3V-qd-uXL"/>
+                        <viewControllerLayoutGuide type="bottom" id="TeQ-Il-49g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lte-8w-O2q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QIo-EV-SXo">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="leagueDogCell" textLabel="Ew6-hN-AvZ" rowHeight="60" style="IBUITableViewCellStyleDefault" id="FUn-hd-0JD">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FUn-hd-0JD" id="m54-Bd-6Fl">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ew6-hN-AvZ">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="59.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.030676136220000001" green="0.69913779149999999" blue="0.37206224929999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TeQ-Il-49g" firstAttribute="top" secondItem="QIo-EV-SXo" secondAttribute="bottom" id="6rC-Ua-t0G"/>
+                            <constraint firstAttribute="trailing" secondItem="QIo-EV-SXo" secondAttribute="trailing" id="aKj-aS-SXH"/>
+                            <constraint firstItem="QIo-EV-SXo" firstAttribute="leading" secondItem="Lte-8w-O2q" secondAttribute="leading" id="b7y-hI-5pv"/>
+                            <constraint firstItem="QIo-EV-SXo" firstAttribute="top" secondItem="k3V-qd-uXL" secondAttribute="bottom" id="kTm-Iz-swC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="QIo-EV-SXo" id="1YY-gR-ohx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hgQ-0S-XAG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1660" y="-671"/>
         </scene>
         <!--Contests View Controller-->
         <scene sceneID="kal-lk-5oy">
@@ -479,7 +533,7 @@
                                                                         <autoresizingMask key="autoresizingMask"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ILu-VQ-0mn">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="51.5" height="30"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="52" height="30"/>
                                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                                 <nil key="highlightedColor"/>

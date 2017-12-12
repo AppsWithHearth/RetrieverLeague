@@ -64,5 +64,19 @@ class LeaguesViewController: BaseViewController, UITableViewDelegate, UITableVie
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let league = leagues[indexPath.row]
+        self.performSegue(withIdentifier: Segue.leagueToLeagueScores, sender: league)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Segue.leagueToLeagueScores {
+            if let leagueScoresVC = segue.destination as? LeagueScoresViewController,
+                let selectedLeague = sender as? League {
+                leagueScoresVC.selectedLeague = selectedLeague
+            }
+        }
+    }
 
 }

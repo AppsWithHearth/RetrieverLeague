@@ -123,11 +123,11 @@ class ContestViewController: BaseViewController, UITableViewDelegate, UITableVie
         let cellHeight = cellHeights[indexPath.section]?[indexPath.row] ?? C.CellHeight.close
         if cellHeight == C.CellHeight.close { // open cell
             cellHeights[indexPath.section]?[indexPath.row] = C.CellHeight.open
-            cell.selectedAnimation(true, animated: true, completion: nil)
+            cell.unfold(true, animated: true, completion: nil)
             duration = 0.5
         } else {// close cell
             cellHeights[indexPath.section]?[indexPath.row] = C.CellHeight.close
-            cell.selectedAnimation(false, animated: true, completion: nil)
+            cell.unfold(false, animated: true, completion: nil)
             duration = 0.5
         }
         
@@ -141,9 +141,9 @@ class ContestViewController: BaseViewController, UITableViewDelegate, UITableVie
         if case let cell as FoldingCell = cell,
             let cellHeight = cellHeights[indexPath.section]?[indexPath.row] {
             if cellHeight == C.CellHeight.close {
-                cell.selectedAnimation(false, animated: false, completion:nil)
+                cell.unfold(false, animated: false, completion:nil)
             } else {
-                cell.selectedAnimation(true, animated: false, completion: nil)
+                cell.unfold(true, animated: false, completion: nil)
             }
         }
     }

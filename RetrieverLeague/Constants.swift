@@ -27,8 +27,10 @@ struct CellID {
     static let contestDogCell = "contestDogCell"
     static let testResultCell = "testResultCell"
     static let leagueCell = "leagueCell"
+    static let leagueDogCell = "leagueDogCell"
 }
 
 struct Segue {
     static let contestsToContest = "contestsToContestSegue"
+    static let leagueToLeagueScores = "leagueToLeagueScoresSegue"
 }
