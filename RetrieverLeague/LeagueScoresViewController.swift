@@ -39,7 +39,9 @@ class LeagueScoresViewController: BaseViewController, UITableViewDataSource, UIT
         DogsService.getDogs(leagueId: selectedLeagueId) { (error, dogsResponse) in
             self.hideLoading()
             if error == nil, let dogs = dogsResponse as? [Dog] {
-                self.dogs = dogs
+                self.dogs = dogs.sorted(by: { (dog1, dog2) -> Bool in
+                    return dog1.totalScore < dog2.totalScore
+                });
                 self.tableView.reloadData()
             }
         }
@@ -57,10 +59,10 @@ class LeagueScoresViewController: BaseViewController, UITableViewDataSource, UIT
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: CellID.leagueDogCell, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellID.leagueDogCell, for: indexPath) as! DogResultTableViewCell
         
         let dog = dogs[indexPath.row]
-        cell.textLabel?.text = dog.name
+        cell.configure(with: dog, index: indexPath.row)
         
         return cell
     }

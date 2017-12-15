@@ -18,6 +18,7 @@ struct Dog {
     var league: League
     var tasks: [Task]?
     var contests = [Contest]()
+    var totalScore = 0.0
     
     init?(with json: JSONObject) {
         
@@ -41,6 +42,9 @@ struct Dog {
         
         if let contestsJson = json["contests"] as? JSONArray {
             self.contests = contestsJson.flatMap { Contest(with: $0) }
+            let totalSum = self.contests.reduce(0.0) { $0 + ($1.dogContest?.result ?? 0.0) }
+            self.totalScore = totalSum / Double(self.contests.count)
+            
         }
     }
     

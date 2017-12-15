@@ -14,15 +14,15 @@ struct Contest {
     var name: String
     var date: Date?
     var location: String
-    var dogs: [Dog]
+    var dogs = [Dog]()
+    var dogContest: DogContest?
     
     init?(with json: JSONObject) {
         
         guard let id = json["id"] as? Int,
             let name = json["name"] as? String,
             let date = json["date"] as? String,
-            let location = json["location"] as? String,
-            let dogs = json["dogs"] as? JSONArray else {
+            let location = json["location"] as? String else {
                 return nil
         }
         
@@ -30,9 +30,14 @@ struct Contest {
         self.name = name
         self.location = location
         self.date = date.date(with: "yyyy-MM-dd'T'HH:mm:ss.SSSZ")
-        self.dogs = dogs.flatMap { Dog(with: $0) }
         
+        if let dogContestJson = json["dogContests"] as? JSONObject {
+            self.dogContest = DogContest(with: dogContestJson)
+        }
         
+        if let dogs = json["dogs"] as? JSONArray  {
+            self.dogs = dogs.flatMap { Dog(with: $0) }
+        }
     }
     
 }
