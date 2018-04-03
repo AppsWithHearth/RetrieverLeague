@@ -17,8 +17,6 @@ class ContestDogTableViewCell: FoldingCell, UICollectionViewDelegateFlowLayout, 
     
     @IBOutlet weak var rankLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var breedLabel: UILabel!
-    @IBOutlet weak var birthLabel: UILabel!
     @IBOutlet weak var tasksHeightConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
@@ -47,8 +45,6 @@ class ContestDogTableViewCell: FoldingCell, UICollectionViewDelegateFlowLayout, 
     func configure(with dog: Dog, index: Int) {
         rankLabel.text = "\(index + 1)"
         nameLabel.text = dog.name
-        breedLabel.text = dog.breed
-        birthLabel.text = dog.dateOfBirth?.string(with: "dd/MM/yyyy") ?? "Unknown"
         self.tasks = dog.tasks ?? []
     }
     
